@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dog" class="com.jiang.pojo.Dog"/>
+    <bean id="cat" class="com.jiang.pojo.Cat"/>
+<!--    autowire 利用 byName  自动匹配 id name 中 people类中对应的 属性名 (全局id 只能有一个）-->
+<!--             利用 byType  自动更具 Cat 或者 Dog 类型一样 自动匹配 （全局class只能有一个）可以不用给 我们的 bean 设置对应的id名字-->
+    <bean id="man" class="com.jiang.pojo.People" autowire="byName">
+        <property name="name" value="0xc4m3l"/>
+    </bean>
+
+
+</beans>

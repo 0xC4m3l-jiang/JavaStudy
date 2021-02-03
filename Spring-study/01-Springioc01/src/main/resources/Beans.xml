@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    com.jiang.HelloWorld  类的对象  message参数赋值为  gogogogogo
+        id = hello  (相当于类的 参数名
+        还可以设置 name
+        必须要有 set 方法。
+-->
+    <bean id="hello" class="com.jiang.set.HelloWorld">
+        <property name="message" value="gogogogogo!">
+        </property>
+    </bean>
+</beans>

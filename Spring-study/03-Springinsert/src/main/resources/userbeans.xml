@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    利用 p c 命名空间来实现
+            p 对应 property
+            c 对应 constructor-arg
+    -->
+    <bean id="user1" class="com.jiang.insert.User" p:name="0xc4m3l" p:number="123456"/>
+
+</beans>

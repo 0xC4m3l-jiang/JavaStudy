@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+ ">
+<!--    要给定 aop
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+-->
+<!--    注册 bean-->
+    <bean id="userService" class="com.jiang.service.UserServiceImpl"/>
+    <bean id="logBefor" class="com.jiang.log.logBefore"/>
+    <bean id="logAfter" class="com.jiang.log.logAfter"/>
+
+<!--导入 aop 配置-->
+    <aop:config>
+<!--        切入点  expression 表达式  execution() 执行的位置-->
+        <aop:pointcut id="pointcut" expression="execution(* com.jiang.service.UserServiceImpl.*(..))"/>
+<!--        执行环绕增加   将 advice-ref 方法切入 pointcut-ref的方法中。 -->
+        <aop:advisor advice-ref="logBefor" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="logAfter" pointcut-ref="pointcut"/>
+    </aop:config>
+</beans>
+
+
