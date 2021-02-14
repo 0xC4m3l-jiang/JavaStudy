@@ -1,0 +1,8 @@
+person:
+  name: 0xc4m3l
+  age: 21
+  boss: false
+  birth: 1999/11/24
+  Dog:
+    name: naixi
+    age: 2

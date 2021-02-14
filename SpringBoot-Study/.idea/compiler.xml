@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="04-Springboot-web-restfulcrud" />
+        <module name="03-Springboot-log" />
+        <module name="01-Springboot-helloworld" />
+        <module name="04-Springboot-web" />
+        <module name="02-Springboot-quick" />
+        <module name="restfulcrudbase" />
+        <module name="logstudy" />
+        <module name="java02-springboot" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="04-Springboot-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01-Springboot-helloworld" options="-parameters" />
+      <module name="02-Springboot-quick" options="-parameters" />
+      <module name="03-Springboot-log" options="-parameters" />
+      <module name="04-Springboot-web" options="-parameters" />
+      <module name="04-Springboot-web-restfulcrud" options="-parameters" />
+      <module name="SpringBoot-Study" options="-parameters" />
+      <module name="java02-springboot" options="-parameters" />
+      <module name="logstudy" options="-parameters" />
+      <module name="restfulcrudbase" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>成功！</h1>
+<!--    th:text  设置div 里面的文本-->
+    <div th:text="${hello}"></div>
+    <hr/>
+<!--    因为 hello = <h1>你好</h1>-->
+<!--    在th:text 中会把 <h1> 标签转义从而 页面输出 字符串 <h1>你好</h1>-->
+    <div th:text="${hello}"></div>
+<!--    在th:utext 中不会进行转义 所以页面会是 <h1> 标签修饰的字符串 你好-->
+    <div th:utext="${hello}"></div>
+    <hr/>
+
+<!--    遍历数组内容  users的内容  3个 h4标签
+ 从 users里面变量取出来的值保存在用户名 user里面 且利用 th:text 输出user
+ -->
+<h4 th:text="${user}" th:each="user:${users}"></h4>
+<hr/>
+<h4>
+    <span th:each="user:${users}"> [[${user}]] </span>
+</h4>
+
+</body>
+</html>
